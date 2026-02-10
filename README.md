@@ -49,15 +49,13 @@ In future, SMEs can adopt low-cost AI solutions such as chatbots, automated inve
 
 ## Tools Used
 - Research Papers (Google Scholar)
-- MS Word
 - PowerPoint / Google Slides
 - GitHub
 
 ## Conclusion
 Although AI offers many benefits, SMEs face multiple barriers in adoption. With proper training, affordable solutions and policy support, SMEs can successfully integrate AI and improve operational efficiency and innovation.
-
-[applsci-15-06465.pdf](https://github.com/user-attachments/files/25215590/applsci-15-06465.pdf)
-[12.+Artificial+Intelligence+Adoption+in+Small+and+Medium.pdf](https://github.com/user-attachments/files/25215588/12.%2BArtificial%2BIntelligence%2BAdoption%2Bin%2BSmall%2Band%2BMedium.pdf)
+applsci-15-06465.pdf](https://github.com/user-attachments/files/25215590/applsci-15-06465.pdf)
+12.+Artificial+Intelligence+Adoption+in+Small+and+Medium.pdf (https://github.com/user-attachments/files/25215588/12.%2BArtificial%2BIntelligence%2BAdoption%2Bin%2BSmall%2Band%2BMedium.pdf)
 
 
 
