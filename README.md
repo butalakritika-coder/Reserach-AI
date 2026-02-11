@@ -1,4 +1,3 @@
-[PBL 2 Mte.pptx](https://github.com/user-attachments/files/25235353/PBL.2.Mte.pptx)
 
 # Challenges of Small and Medium Scale Industries in Adopting Artificial Intelligence (AI)
 
