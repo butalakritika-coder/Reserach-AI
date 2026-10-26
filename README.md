@@ -1,123 +1,117 @@
-# A Gradual AI Adoption Framework for Small and Medium Enterprises (SMEs)
+# AI Adoption among Indian Establishments: A Data-Driven & Machine Learning Approach
 
 ## Overview
-This project focuses on understanding why Small and Medium Enterprises (SMEs) face difficulty in adopting Artificial Intelligence (AI) and proposes a practical framework to help them gradually adopt AI technologies.
 
-The project is research-based and aims to bridge the gap between theoretical studies and practical implementation.
+This project investigates whether technological, digital, and workforce-related characteristics can help predict AI adoption among Indian establishments. It combines research on AI adoption with a machine-learning classification approach using establishment-level data.
 
-## Problem Statement
-Although AI improves productivity, efficiency and decision-making, most SMEs are unable to adopt it because of:
+## Research Motivation
 
-- High implementation cost
-- Lack of technical knowledge
-- Absence of structured data
-- Fear of system complexity
-- Lack of clear guidance
+AI adoption varies across businesses. Previous studies identify factors related to technology, organisational readiness, and the external environment. This project examines measurable establishment characteristics and compares multiple machine-learning models for predicting AI adoption.
 
-As a result, SMEs remain behind large organizations in terms of technology adoption.
+## Dataset
 
-## Research Gap
-Most existing studies explain the barriers to AI adoption in SMEs, but they do not provide a simple and practical roadmap that small industries can follow.
+**Source:** World Bank Enterprise Survey — Follow-up on Artificial Intelligence 2026, India.
 
-This project addresses that gap by proposing a gradual AI adoption framework specifically designed for SMEs.
+* Original dataset: 1,355 establishments and 132 variables.
+* Analytical dataset: 1,354 rows after preprocessing.
+* Target variable: `ai_adopt1` — AI adopter/non-adopter.
+* Selected predictors: 14 technological, digital, software-use, and workforce-related variables.
 
-## Objectives
-The main objectives of this project are:
+The dataset includes establishments of different sizes; results should not be interpreted as applying exclusively to SMEs.
 
-1. To study the role of AI in business operations
-2. To identify the challenges faced by SMEs in adopting AI
-3. To classify these challenges into different categories
-4. To propose a practical AI adoption framework
-5. To suggest possible future directions for implementation
+Dataset catalog: https://microdata.worldbank.org/catalog/8552/data-dictionary
 
+## Methodology
 
-## Challenges Identified
-The major barriers faced by SMEs are:
+The workflow consists of:
 
-### Economic Barriers
-- High cost of AI tools
-- Lack of investment
+1. Data loading and preprocessing.
+2. Selection of the target and 14 predictor variables.
+3. Stratified 80:20 train-test split.
+4. Training and comparison of four classifiers.
+5. Evaluation using accuracy, precision, recall, F1-score, and ROC-AUC.
+6. Stratified 5-fold cross-validation.
+7. Random Forest feature-importance analysis.
 
-### Technical Barriers
-- Lack of skilled employees
-- Poor technical infrastructure
+### Machine-Learning Models
 
-### Organizational Barriers
-- Resistance to change
-- Fear of job loss
+* Logistic Regression
+* Decision Tree
+* Random Forest
+* Gradient Boosting
 
-### Data and Legal Barriers
-- Lack of digital records
-- Data privacy concerns
+## Results
 
-## Proposed AI Adoption Model
+On the held-out test set, Gradient Boosting achieved the highest accuracy and F1-score among the four tested models. Random Forest achieved the highest ROC-AUC on the test set.
 
-Awareness → Digitization → AI Integration → Optimization
+The Random Forest feature-importance analysis ranked specialised finance software, daily computer usage, and digital finance platforms among the most influential predictors in this model.
 
-### 1. Awareness
-The business understands what AI is and where it can be useful.
+These results describe predictive associations; they do not establish causality.
 
-### 2. Digitization
-The business starts storing information digitally because AI requires data.
+Detailed result tables and plots are available in the `results/` directory.
 
-### 3. AI Integration
-The business adopts simple AI tools such as:
-- Customer support chatbot
-- Demand forecasting
-- Recommendation system
+## Repository Structure
 
-### 4. Optimization
-The business moves towards advanced AI applications such as:
-- Predictive analytics
-- Automation
-- Smart decision-making
+```text
+Reserach-AI/
+├── PPT/
+├── Research papers/
+├── src/
+│   └── main.py
+├── results/
+│   ├── cleaned_data.csv
+│   ├── model_comparison.csv
+│   ├── model_comparison.png
+│   ├── cross_validation_results.csv
+│   ├── cross_validation_comparison.png
+│   ├── feature_importance.png
+│   └── confusion_matrix_*.png
+├── README.md
+├── requirements.txt
+└── .gitignore
+```
 
-This gradual approach reduces financial and technical risk.
+## Setup
 
+Use Python 3.10 or later.
 
-## Why This Model is Important
-Most SMEs fail because they try to directly implement advanced AI systems without preparation.
+Create and activate a virtual environment:
 
-This framework provides a step-by-step roadmap and helps SMEs understand:
+```bash
+python -m venv .venv
+```
 
-- When they are ready for AI
-- Which AI tools are suitable
-- What they should do before implementation
+Windows PowerShell:
 
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
 
-## Current Progress
-- Literature review completed
-- Major challenges identified
-- Barriers classified into categories
-- AI adoption framework proposed
-- Initial prototype concept prepared
+Install dependencies:
 
+```bash
+pip install -r requirements.txt
+```
 
-## Future Work
-The project can be extended in the future by:
+## Running the Project
 
-- Refining the AI adoption framework
-- Defining measurable indicators for each stage
-- Validating the model using real SME case studies
-- Developing an AI readiness assessment tool
-- Exploring AI tools such as demand prediction and inventory management
-- Converting the work into a research paper
+Run the main implementation from the repository root:
 
+```bash
+python src/main.py
+```
 
-## Technologies / Concepts Used
-- Artificial Intelligence
-- Natural Language Processing
-- SME Digital Transformation
-- Literature Review and Comparative Analysis
+**Dataset note:** The source dataset is not included in this repository by default. Place the required data file in the expected location before running the script. Check the paths configured in `src/main.py`.
 
+## Limitations
 
-## Conclusion
-The project concludes that SMEs do not fail because AI is unavailable. They fail because they do not have a clear and practical strategy for adoption.
+* Results depend on the available variables and the dataset's coverage.
+* Feature importance indicates predictive contribution, not causal influence.
+* The dataset includes establishments of different sizes, so SME-specific conclusions require separate analysis.
 
-The proposed framework helps SMEs adopt AI gradually, making implementation more affordable, realistic and effective.
+## Project Context
 
+Research-based academic project — B.Tech Computer Science and Engineering, Manipal University Jaipur.
 
-
-
-
-
+**Student:** Kritika Butala
+**Supervisor:** Dr. Amit Kumar Gupta
