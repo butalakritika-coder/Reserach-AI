@@ -111,7 +111,5 @@ python src/main.py
 
 ## Project Context
 
-Research-based academic project — B.Tech Computer Science and Engineering, Manipal University Jaipur.
+Research-based academic project 
 
-**Student:** Kritika Butala
-**Supervisor:** Dr. Amit Kumar Gupta
